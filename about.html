@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нас — Спортзал «Силач»</title>
+<meta name="description" content="История и миссия спортзала «Силач».">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">СИЛАЧ</a></div>
+    <nav class="main-nav" aria-label="Основное меню">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="trainers.html">Тренеры</a></li>
+        <li><a href="schedule.html">Расписание</a></li>
+        <li><a href="prices.html">Цены</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+<aside aria-label="Вспомогательное меню">
+  <h2>На этой странице</h2>
+  <ul>
+    <li><a href="#history">История</a></li>
+    <li><a href="#mission">Миссия</a></li>
+    <li><a href="#values">Ценности</a></li>
+  </ul>
+</aside>
+
+<main>
+  <h1>О спортзале «Силач»</h1>
+  <h2 id="history">История</h2>
+  <p>«Силач» открылся в 2010 году. Начинали с зала на 50 человек, сегодня — комплекс площадью 2000 м².</p>
+  <h2 id="mission">Миссия</h2>
+  <p>Сделать спорт доступным и комфортным для каждого.</p>
+  <h2 id="values">Ценности</h2>
+  <ul>
+    <li>Безопасность и здоровье клиентов.</li>
+    <li>Профессионализм тренеров.</li>
+    <li>Доброжелательная атмосфера.</li>
+    <li>Честные цены.</li>
+  </ul>
+</main>
+
+    <form data-ajax>
+      <input type="hidden" id="selected-trainings" name="selected_trainings" value="">
+      <div class="form-group">
+        <label for="name-home">Ваше имя</label>
+        <input type="text" id="name-home" name="name" required placeholder="Иван">
+        <small id="name-home-hint" hidden>Введите имя.</small>
+      </div>
+      <div class="form-group">
+        <label for="email-home">E-mail</label>
+        <input type="email" id="email-home" name="email" required placeholder="ivan@example.com">
+        <small id="email-home-hint" hidden>Укажите корректный e-mail.</small>
+      </div>
+      <button type="submit">Отправить заявку</button>
+      <div class="form-message" role="status" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <footer>
+    <div>
+      <h3>О разработчике</h3>
+      <p>Сайт разработан: <strong>Иванов Иван Иванович</strong></p>
+      <p>E-mail: <a href="mailto:developer@example.com">developer@example.com</a></p>
+      <p>© 2025 Спортзал «Силач».</p>
+    </div>
+    <div>
+      <h3>Владелец сайта</h3>
+      <p>ФИО: <strong>Петров Пётр Петрович</strong></p>
+      <p>E-mail: <a href="mailto:owner@silach.ru">owner@silach.ru</a></p>
+      <p>Адрес: г. Москва, ул. Спортивная, д. 1</p>
+    </div>
+    <div>
+      <h3>Обратная связь по сайту</h3>
+      <form data-ajax aria-label="Форма обратной связи">
+        <div class="form-group"><label for="fb-name">Имя</label><input type="text" id="fb-name" name="name" required placeholder="Ваше имя"></div>
+        <div class="form-group"><label for="fb-email">E-mail</label><input type="email" id="fb-email" name="email" required placeholder="you@mail.ru"></div>
+        <div class="form-group"><label for="fb-text">Отзыв или замечание</label><textarea id="fb-text" name="message" rows="3" required placeholder="Опишите проблему"></textarea></div>
+        <button type="submit">Отправить</button>
+        <div class="form-message" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

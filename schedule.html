@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Расписание — Спортзал «Силач»</title>
+<meta name="description" content="Расписание групповых занятий спортзала «Силач».">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">СИЛАЧ</a></div>
+    <nav class="main-nav" aria-label="Основное меню">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="trainers.html">Тренеры</a></li>
+        <li><a href="schedule.html">Расписание</a></li>
+        <li><a href="prices.html">Цены</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+<aside aria-label="Вспомогательное меню">
+  <h2>На этой странице</h2>
+  <ul>
+    <li><a href="#table">Таблица расписания</a></li>
+    <li><a href="#notes">Примечания</a></li>
+  </ul>
+</aside>
+
+<main>
+  <h1>Расписание занятий</h1>
+  <table id="table">
+    <caption>Групповые тренировки на неделю</caption>
+    <thead>
+      <tr><th scope="col">Время</th><th scope="col">Пн</th><th scope="col">Вт</th><th scope="col">Ср</th><th scope="col">Чт</th><th scope="col">Пт</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>08:00</td><td>Йога</td><td>Кроссфит</td><td>Йога</td><td>Кроссфит</td><td>Йога</td></tr>
+      <tr><td>12:00</td><td>Силовые</td><td>Бокс</td><td>Силовые</td><td>Бокс</td><td>Силовые</td></tr>
+      <tr><td>18:00</td><td>Кроссфит</td><td>Бассейн</td><td>Кроссфит</td><td>Бассейн</td><td>Кроссфит</td></tr>
+      <tr><td>20:00</td><td>Бокс</td><td>Йога</td><td>Бокс</td><td>Йога</td><td>Бокс</td></tr>
+    </tbody>
+  </table>
+  <h2 id="notes">Примечания</h2>
+  <ul>
+    <li>Запись за 15 минут до начала.</li>
+    <li>Отмена — не позднее чем за 2 часа.</li>
+  </ul>
+</main>
+
+  <footer>
+    <div>
+      <h3>О разработчике</h3>
+      <p>Сайт разработан: <strong>Иванов Иван Иванович</strong></p>
+      <p>E-mail: <a href="mailto:developer@example.com">developer@example.com</a></p>
+      <p>© 2025 Спортзал «Силач».</p>
+    </div>
+    <div>
+      <h3>Владелец сайта</h3>
+      <p>ФИО: <strong>Петров Пётр Петрович</strong></p>
+      <p>E-mail: <a href="mailto:owner@silach.ru">owner@silach.ru</a></p>
+      <p>Адрес: г. Москва, ул. Спортивная, д. 1</p>
+    </div>
+    <div>
+      <h3>Обратная связь по сайту</h3>
+      <form data-ajax aria-label="Форма обратной связи">
+        <div class="form-group"><label for="fb-name">Имя</label><input type="text" id="fb-name" name="name" required placeholder="Ваше имя"></div>
+        <div class="form-group"><label for="fb-email">E-mail</label><input type="email" id="fb-email" name="email" required placeholder="you@mail.ru"></div>
+        <div class="form-group"><label for="fb-text">Отзыв или замечание</label><textarea id="fb-text" name="message" rows="3" required placeholder="Опишите проблему"></textarea></div>
+        <button type="submit">Отправить</button>
+        <div class="form-message" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

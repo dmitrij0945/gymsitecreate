@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Услуги — Спортзал «Силач»</title>
+<meta name="description" content="Направления тренировок в спортзале «Силач».">
+<meta name="description" content="История и миссия спортзала «Силач».">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">СИЛАЧ</a></div>
+    <nav class="main-nav" aria-label="Основное меню">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="trainers.html">Тренеры</a></li>
+        <li><a href="schedule.html">Расписание</a></li>
+        <li><a href="prices.html">Цены</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+<aside aria-label="Вспомогательное меню">
+  <h2>Направления</h2>
+  <ul>
+    <li><a href="#strength">Силовые</a></li>
+    <li><a href="#crossfit">Кроссфит</a></li>
+    <li><a href="#yoga">Йога</a></li>
+    <li><a href="#boxing">Бокс</a></li>
+    <li><a href="#pool">Бассейн</a></li>
+  </ul>
+</aside>
+
+<main>
+  <h1>Услуги спортзала «Силач»</h1>
+  <h2 id="strength">Силовые тренировки</h2>
+  <p>Свободные веса и тренажёры для набора массы и укрепления связок.</p>
+  <h2 id="crossfit">Кроссфит</h2>
+  <p>Высокоинтенсивные функциональные тренировки.</p>
+  <h2 id="yoga">Йога</h2>
+  <p>Групповые занятия для гибкости и снятия стресса.</p>
+  <h2 id="boxing">Бокс</h2>
+  <p>Техника удара, работа на мешках, спарринги.</p>
+  <h2 id="pool">Бассейн</h2>
+  <p>25-метровый бассейн для плавания и аквааэробики.</p>
+  <h2>Список направлений</h2>
+  <ul>
+    <li>Силовые тренировки</li>
+    <li>Кроссфит</li>
+    <li>Йога</li>
+    <li>Бокс</li>
+    <li>Бассейн</li>
+  </ul>
+</main>
+
+  <footer>
+    <div>
+      <h3>О разработчике</h3>
+      <p>Сайт разработан: <strong>Иванов Иван Иванович</strong></p>
+      <p>E-mail: <a href="mailto:developer@example.com">developer@example.com</a></p>
+      <p>© 2025 Спортзал «Силач».</p>
+    </div>
+    <div>
+      <h3>Владелец сайта</h3>
+      <p>ФИО: <strong>Петров Пётр Петрович</strong></p>
+      <p>E-mail: <a href="mailto:owner@silach.ru">owner@silach.ru</a></p>
+      <p>Адрес: г. Москва, ул. Спортивная, д. 1</p>
+    </div>
+    <div>
+      <h3>Обратная связь по сайту</h3>
+      <form data-ajax aria-label="Форма обратной связи">
+        <div class="form-group"><label for="fb-name">Имя</label><input type="text" id="fb-name" name="name" required placeholder="Ваше имя"></div>
+        <div class="form-group"><label for="fb-email">E-mail</label><input type="email" id="fb-email" name="email" required placeholder="you@mail.ru"></div>
+        <div class="form-group"><label for="fb-text">Отзыв или замечание</label><textarea id="fb-text" name="message" rows="3" required placeholder="Опишите проблему"></textarea></div>
+        <button type="submit">Отправить</button>
+        <div class="form-message" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

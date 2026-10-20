@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тренеры — Спортзал «Силач»</title>
+<meta name="description" content="Тренеры спортзала «Силач».">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">СИЛАЧ</a></div>
+    <nav class="main-nav" aria-label="Основное меню">
+      <ul>
+         <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="trainers.html">Тренеры</a></li>
+        <li><a href="schedule.html">Расписание</a></li>
+        <li><a href="prices.html">Цены</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+<aside aria-label="Вспомогательное меню">
+  <h2>Наши тренеры</h2>
+  <ul>
+    <li><a href="#alexey">Алексей Смирнов</a></li>
+    <li><a href="#maria">Мария Иванова</a></li>
+    <li><a href="#dmitry">Дмитрий Козлов</a></li>
+  </ul>
+</aside>
+
+<main>
+  <h1>Наши тренеры</h1>
+  <div class="cards">
+    <div class="card" id="alexey">
+      <img src="img/trainer1.jpg" alt="Тренер Алексей Смирнов, силовые тренировки">
+      <h3>Алексей Смирнов</h3>
+      <p>Мастер спорта по пауэрлифтингу. Стаж 12 лет.</p>
+      <p><a href="mailto:alexey@silach.ru">alexey@silach.ru</a></p>
+    </div>
+    <div class="card" id="maria">
+      <img src="img/trainer2.jpg" alt="Тренер Мария Иванова, йога">
+      <h3>Мария Иванова</h3>
+      <p>Инструктор по йоге и пилатесу. Стаж 8 лет.</p>
+      <p><a href="mailto:maria@silach.ru">maria@silach.ru</a></p>
+    </div>
+    <div class="card" id="dmitry">
+      <img src="img/trainer3.jpg" alt="Тренер Дмитрий Козлов, бокс">
+      <h3>Дмитрий Козлов</h3>
+      <p>Мастер спорта по боксу. Стаж 10 лет.</p>
+      <p><a href="mailto:dmitry@silach.ru">dmitry@silach.ru</a></p>
+    </div>
+  </div>
+</main>
+
+  <footer>
+    <div>
+      <h3>О разработчике</h3>
+      <p>Сайт разработан: <strong>Иванов Иван Иванович</strong></p>
+      <p>E-mail: <a href="mailto:developer@example.com">developer@example.com</a></p>
+      <p>© 2025 Спортзал «Силач».</p>
+    </div>
+    <div>
+      <h3>Владелец сайта</h3>
+      <p>ФИО: <strong>Петров Пётр Петрович</strong></p>
+      <p>E-mail: <a href="mailto:owner@silach.ru">owner@silach.ru</a></p>
+      <p>Адрес: г. Москва, ул. Спортивная, д. 1</p>
+    </div>
+    <div>
+      <h3>Обратная связь по сайту</h3>
+      <form data-ajax aria-label="Форма обратной связи">
+        <div class="form-group"><label for="fb-name">Имя</label><input type="text" id="fb-name" name="name" required placeholder="Ваше имя"></div>
+        <div class="form-group"><label for="fb-email">E-mail</label><input type="email" id="fb-email" name="email" required placeholder="you@mail.ru"></div>
+        <div class="form-group"><label for="fb-text">Отзыв или замечание</label><textarea id="fb-text" name="message" rows="3" required placeholder="Опишите проблему"></textarea></div>
+        <button type="submit">Отправить</button>
+        <div class="form-message" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

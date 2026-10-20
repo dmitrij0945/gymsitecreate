@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Цены — Спортзал «Силач»</title>
+<meta name="description" content="Стоимость абонементов спортзала «Силач».">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">СИЛАЧ</a></div>
+    <nav class="main-nav" aria-label="Основное меню">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="trainers.html">Тренеры</a></li>
+        <li><a href="schedule.html">Расписание</a></li>
+        <li><a href="prices.html">Цены</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+<aside aria-label="Вспомогательное меню">
+  <h2>На этой странице</h2>
+  <ul>
+    <li><a href="#abonements">Абонементы</a></li>
+    <li><a href="#discounts">Скидки</a></li>
+  </ul>
+</aside>
+
+<main>
+  <h1>Цены и абонементы</h1>
+  <table id="abonements">
+    <caption>Стоимость абонементов</caption>
+    <thead>
+      <tr><th scope="col">Абонемент</th><th scope="col">Срок</th><th scope="col">Цена</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Разовое</td><td>1 день</td><td>500 ₽</td></tr>
+      <tr><td>Месячный</td><td>30 дней</td><td>3 500 ₽</td></tr>
+      <tr><td>Квартальный</td><td>90 дней</td><td>9 000 ₽</td></tr>
+      <tr><td>Годовой</td><td>365 дней</td><td>30 000 ₽</td></tr>
+    </tbody>
+  </table>
+  <h2 id="discounts">Скидки</h2>
+  <ul>
+    <li>Студентам — 10%.</li>
+    <li>Пенсионерам — 15%.</li>
+    <li>Годовой абонемент — +2 недели в подарок.</li>
+  </ul>
+</main>
+
+  <footer>
+    <div>
+      <h3>О разработчике</h3>
+      <p>Сайт разработан: <strong>Иванов Иван Иванович</strong></p>
+      <p>E-mail: <a href="mailto:developer@example.com">developer@example.com</a></p>
+      <p>© 2025 Спортзал «Силач».</p>
+    </div>
+    <div>
+      <h3>Владелец сайта</h3>
+      <p>ФИО: <strong>Петров Пётр Петрович</strong></p>
+      <p>E-mail: <a href="mailto:owner@silach.ru">owner@silach.ru</a></p>
+      <p>Адрес: г. Москва, ул. Спортивная, д. 1</p>
+    </div>
+    <div>
+      <h3>Обратная связь по сайту</h3>
+      <form data-ajax aria-label="Форма обратной связи">
+        <div class="form-group"><label for="fb-name">Имя</label><input type="text" id="fb-name" name="name" required placeholder="Ваше имя"></div>
+        <div class="form-group"><label for="fb-email">E-mail</label><input type="email" id="fb-email" name="email" required placeholder="you@mail.ru"></div>
+        <div class="form-group"><label for="fb-text">Отзыв или замечание</label><textarea id="fb-text" name="message" rows="3" required placeholder="Опишите проблему"></textarea></div>
+        <button type="submit">Отправить</button>
+        <div class="form-message" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
