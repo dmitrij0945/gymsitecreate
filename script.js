@@ -87,13 +87,8 @@ document.addEventListener('click', function (event) {
     wrapper.addEventListener('drop', onDrop);
   }
 
-  // --- клавиатурная альтернатива (Enter/Space перемещает элемент) ---
-  function onItemKeydown(e) {
-    const item = e.target.closest('.dnd-item');
-    if (!item) return;
-    if (e.key !== 'Enter' && e.key !== ' ') return;
-    e.preventDefault();
-
+  // --- перенос элемента в соседний список (общая функция) ---
+  function moveToOtherList(item) {
     const currentList = item.parentElement;
     const otherList = currentList === sourceList ? targetList : sourceList;
     otherList.appendChild(item);
@@ -101,8 +96,29 @@ document.addEventListener('click', function (event) {
     updateSelectedHiddenField();
   }
 
+  // --- клавиатурная альтернатива (Enter/Space перемещает элемент) ---
+  function onItemKeydown(e) {
+    const item = e.target.closest('.dnd-item');
+    if (!item) return;
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    e.preventDefault();
+    moveToOtherList(item);
+  }
+
+  // --- сенсорные экраны: HTML5 drag & drop на телефонах не работает,
+  //     поэтому там элемент переносится касанием ---
+  const isTouchDevice = window.matchMedia('(pointer: coarse)');
+
+  function onItemClick(e) {
+    if (!isTouchDevice.matches) return;      // на компьютере остаётся перетаскивание
+    const item = e.target.closest('.dnd-item');
+    if (!item) return;
+    moveToOtherList(item);
+  }
+
   if (wrapper) {
     wrapper.addEventListener('keydown', onItemKeydown);
+    wrapper.addEventListener('click', onItemClick);
   }
 
   // Обновляем скрытое поле для формы
