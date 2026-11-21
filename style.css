@@ -25,87 +25,101 @@ body {
   min-height: 100vh;
 }
 
-/* ===== Шапка (верхнее меню) — красный градиент ===== */
+/* ===== Шапка сайта ===== */
 header {
   grid-area: header;
-  background: linear-gradient(135deg, #c1121f 0%, #e63946 45%, #ff6b35 100%);
+  background: linear-gradient(135deg, #121212 0%, #1f1f1f 45%, #2d2d2d 100%);
   color: #ffffff;
-  padding: 14px 40px;               /* 40px отступы по бокам от края экрана */
+  padding: 15px 40px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-  box-shadow: 0 4px 18px rgba(230, 57, 70, 0.35);
+  align-items: center;            /* ЖЕСТКО ЦЕНТРИРУЕМ ВСЁ ПО ВЕРТИКАЛИ */
+  justify-content: space-between; /* Логотип слева, меню справа */
+  flex-wrap: nowrap;              
+  gap: 30px;
+  min-height: 140px;              
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
   position: relative;
   z-index: 10;
 }
 
-/* ===== Объемный текст СИЛАЧ ===== */
-.logo-text {
-  font-family: 'Arial Black', 'Impact', sans-serif;
-  font-size: 2.8rem;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  
-  /* Ослепительно белый цвет */
-  color: #ffffff; 
-  
-  /* 3D-эффект: многослойная тень снизу и мягкая тень сзади */
-  text-shadow: 
-    0 1px 0 #d4d4d4,   /* Блик */
-    0 2px 0 #bfbfbf,   /* Тень 1 */
-    0 3px 0 #a3a3a3,   /* Тень 2 */
-    0 4px 0 #8c8c8c,   /* Тень 3 */
-    0 5px 0 #737373,   /* Тень 4 */
-    0 10px 15px rgba(0, 0, 0, 0.4); /* Мягкая падающая тень */
-    
-  transition: transform 0.15s ease, text-shadow 0.15s ease;
-  line-height: 1;
+/* ===== Контейнер логотипа ===== */
+.logo {
+  display: flex;
+  align-items: center;            /* Центрируем картинку по высоте */
+  flex-shrink: 0;                 
+  height: 100%;                   
 }
 
-/* Эффект нажатия при наведении */
-.logo a:hover .logo-text {
-  transform: translateY(3px); /* Текст «проваливается» вниз */
-  text-shadow: 
-    0 1px 0 #d4d4d4, 
-    0 2px 0 #bfbfbf, 
-    0 7px 10px rgba(0, 0, 0, 0.4); /* Тень становится короче */
+.logo a {
+  display: flex;
+  align-items: center;            /* Центрируем ссылку по высоте */
+  line-height: 0;
+  height: 100%;
 }
 
-/* ===== Основное меню ===== */
+/* ===== Картинка-логотип ===== */
+.logo-img {
+  display: block;
+  height: 110px;                  
+  width: auto;                    
+  max-width: 400px;               
+  object-fit: contain;            /* Возвращаем contain, чтобы картинка не обрезалась, если пропорции другие */
+  transition: transform 0.15s ease;
+}
+
+.logo a:hover .logo-img {
+  transform: translateY(2px);
+}
+
+/* ===== Меню в шапке ===== */
+nav.main-nav {
+  display: flex;
+  align-items: center;            /* Центрируем меню по высоте */
+  min-width: 0;                   
+  height: 100%;
+}
+
 nav.main-nav ul {
   display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
+  flex-wrap: wrap;                
+  gap: 10px;                      
   list-style: none;
+  align-items: center;            /* Центрируем пункты меню по высоте */
+  margin: 0;
+  padding: 0;
 }
 
 nav.main-nav a {
-  display: block;
-  padding: 10px 16px;
+  display: flex;                  /* Flex для идеального выравнивания текста внутри кнопки */
+  align-items: center;
+  justify-content: center;
+  padding: 15px 24px;             
   color: #ffffff;
   text-decoration: none;
-  border-radius: 8px;
-  font-weight: 500;
+  border-radius: 14px;            
+  font-size: 1.25rem;             
+  font-weight: 600;               
+  white-space: nowrap;            
   transition: background 0.2s, color 0.2s, transform 0.15s;
 }
+
+/* ... остальные стили для hover и active остаются без изменений ... */
+
 
 nav.main-nav a:hover,
 nav.main-nav a:focus {
   background: rgba(255, 255, 255, 0.22);
   outline: 2px solid #ffffff;
   outline-offset: 2px;
-  transform: translateY(-1px);
+  transform: translateY(-2px);    /* Чуть больше подпрыгивает при наведении */
 }
 
 /* Текущая страница — белая плашка */
 nav.main-nav a.active {
   background: #ffffff;
   color: #c1121f;
-  font-weight: 700;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-weight: 800;               /* Жирный текст для активной кнопки */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 /* ===== Левое вспомогательное меню ===== */
@@ -632,7 +646,8 @@ footer .form-message.error {
   header {
     flex-direction: column;
     align-items: flex-start;
-    padding: 14px 20px; /* На мобильных делаем отступ поменьше */
+    padding: 14px 20px;
+    min-height: 62px;
   }
 
   nav.main-nav ul {
@@ -645,14 +660,11 @@ footer .form-message.error {
   }
 
   /* Уменьшаем логотип на мобильных */
+  .logo {
+    max-width: 160px;
+  }
   .logo-img {
-    height: 48px;
-  }
-  .logo-text {
-    font-size: 1.6rem;
-  }
-  .logo a {
-    gap: 16px;
+    height: 42px;
   }
 
   main h1 {
@@ -691,12 +703,13 @@ footer .form-message.error {
   clip: rect(0 0 0 0);
   white-space: nowrap;
 }
+
 /* ==========================================
    Отступы для якорной навигации (чтобы шапка 
    не перекрывала карточки при скролле)
    ========================================== */
 .card[id] {
-  scroll-margin-top: 100px; /* Если шапка выше, увеличьте до 120px */
+  scroll-margin-top: 100px;
 }
 
 /* Подсветка карточки, к которой перешли по ссылке */
@@ -705,4 +718,4 @@ footer .form-message.error {
   box-shadow: 0 0 25px rgba(230, 57, 70, 0.5);
   transform: scale(1.02);
   transition: all 0.3s ease;
-}
+} 
